@@ -1,5 +1,5 @@
 <?php
-    $myName = Galina;
+    $myName = "Galina";
     $myAge = 29;
     $dateNow = date("d-m-y G:i");
 
