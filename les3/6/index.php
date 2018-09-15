@@ -1,55 +1,51 @@
 <?php
     $title = 'Lesson 3 Ex. 6';
 
-    function printOneItemMenu ($titleMenu) {
-        echo '<li><a href="#">' . $titleMenu . '</a></li>';
+    function renderOneLi ($stringMenu) {
+        echo '<li><a href="#">' . $stringMenu . "</a></li>";
     }
-
-    function printMenu ($menuArray) {
-        echo '<ul>';
-        foreach($menuArray as $value) {
-            printOneItemMenu($value);
+    
+    function renderOneItemMenu ($key, $value) {
+        if (is_int($key)) {
+            renderOneLi($value);
+        } else {
+            renderOneLi($key);
+            renderMenu($value);
         }
-        echo '</ul>';
     }
-
-    function printMenuWithSubmenu($menuWithSubmenuArray) {
+    
+    function renderMenu ($menu) {
         echo '<ul>';
-        foreach($menuWithSubmenuArray as $key => $value) {
-            printOneItemMenu($key);
-            if ($value == '') {
-                continue;
-            }
-
-            if (is_string($value)) {
-                echo '<ul>';
-                printOneItemMenu($value);
-                echo '</ul>';
-            } else {
-                printMenu($value);
+        if (is_string($menu)) {
+            renderOneItemMenu(0, $menu);
+        } else {
+            foreach ($menu as $key => $value) {
+                renderOneItemMenu($key, $value);
             }
         }
         echo '</ul>';
     }
-
+    
     $menu = [
         'Меню1',
         'Меню2',
         'Меню3',
         'Меню4',
     ];
-
+    
     $menuWithSubmenu = [
-        'Меню1' => '',
+        'Меню1',
         'Меню2' => [
             'Подменю1',
             'Подменю2',
-            'Подменю3',
+            'Подменю3' => [
+                '1',
+                '2'
+            ],
         ],
-        'Меню3' => '',
+        'Меню3',
         'Меню4' => 'Подменю',
-    ];
-    
+    ]; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,8 +57,8 @@
 </head>
 <body>
     <p>Меню без подменю</p>
-    <?= printMenu($menu); ?>
+    <?= renderMenu($menu); ?>
     <p>Меню с подменю</p>
-    <?= printMenuWithSubmenu($menuWithSubmenu);?>
+    <?= renderMenu($menuWithSubmenu); ?>
 </body>
 </html>
