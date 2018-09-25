@@ -1,0 +1,58 @@
+#gallery, form {
+    width: 1200px;
+    margin: 20px auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+form {
+    padding: 20px;
+}
+
+#gallery {
+    padding-left: 30px;
+}
+
+#gallery a {
+    margin: 30px 30px 30px 0;
+}
+
+#gallery img {
+    width: 150px;
+    height: 150px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+form button {
+    width: 40%;
+    height: 35px;
+}
+
+form input[type="file"] {
+    width: 50%;
+    height: 35px;
+    border: 1px solid black;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+h2, h5 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message_file {
+    width: 1200px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    color: red;
+}
