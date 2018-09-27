@@ -8,10 +8,14 @@
     <title>Lesson 5 - One Image</title>
 </head>
 <body>
-    <h2>Картинка</h2>
-    <div id="one_image">
-        <img src="<?= $infoImage['full_path'] ?>" />
-    </div>
-    <h4>Картинка просмотрена: <?= $infoImage['count_view'] ?> <?= $str ?></h4>
+    <?php if($infoImage): ?>
+        <h2>Картинка</h2>
+        <div id="one_image">
+            <img src="<?= $infoImage['full_path'] ?>" />
+        </div>
+        <h4>Картинка просмотрена: <?= $infoImage['count_view'] ?> <?= $str ?></h4>
+    <?php else: ?>
+        <h2>Запрашиваемая картинка не найдена!</h2>
+    <?php endif; ?>
 </body>
 </html>

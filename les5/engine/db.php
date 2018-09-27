@@ -76,6 +76,7 @@ function getGalleryFromDB() {
 
 function getOneImageFromDB(int $id) {
     $conn = mysqli_connect(SERVER_DB, USER_DB, PASSWORD_USER_DB, DB_IMAGE);    
+    $id = (int)mysqli_real_escape_string($conn, $id);
 
     if ($conn) {
         $sql = "select * from " . IMAGE_TABLE . " where id={$id}";
@@ -84,15 +85,17 @@ function getOneImageFromDB(int $id) {
         };
         
         $oneImage = mysqli_fetch_assoc($res);
-        $countView = $oneImage['count_view'] + 1;
+        if ($oneImage) {
+            $countView = $oneImage['count_view'] + 1;
 
-        $sql = "update " . IMAGE_TABLE . " SET count_view={$countView} WHERE id={$id}";
-        if (!$res = mysqli_query($conn, $sql)) {
-            var_dump(mysqli_error($conn));
-        };
+            $sql = "update " . IMAGE_TABLE . " SET count_view={$countView} WHERE id={$id}";
+            if (!$res = mysqli_query($conn, $sql)) {
+                var_dump(mysqli_error($conn));
+            };
 
-        $oneImage['count_view'] = $countView;
-
+            $oneImage['count_view'] = $countView;
+        }
+        
         mysqli_close($conn);
     } else {
         echo "Невозможно подключиться к БД <br>";
