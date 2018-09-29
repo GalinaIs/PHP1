@@ -1,0 +1,28 @@
+form {
+    width: 1200px;
+    margin: 20px auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+button, input, select {
+    width: 15%;
+    height: 35px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}

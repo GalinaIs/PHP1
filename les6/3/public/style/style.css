@@ -1,0 +1,42 @@
+form, #feedback {
+    width: 1200px;
+    margin: 20px auto;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.message {
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+.message:first-child {
+    margin-top: 10px;
+}
+
+.message:last-child {
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+button, input {
+    width: 100%;
+    height: 35px;
+    margin: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
