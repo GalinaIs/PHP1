@@ -1,0 +1,150 @@
+#products, #one_product {
+    width: 1200px;
+    margin: 20px auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+     
+}
+
+#regist, #login {
+    width: 1200px;
+    margin: 20px auto;
+    border: 1px solid black;
+    box-sizing: border-box;    
+}
+
+#regist form, #login form {
+    padding-bottom: 20px;
+}
+
+#regist input, #login input {
+    margin: 10px auto;
+    width: 500px;
+    height: 25px;
+}
+
+#products {
+    padding: 20px; 
+}
+
+#one_product {
+    padding: 0 20px; 
+}
+
+#one_product form {
+    padding: 0 20px; 
+    width: 100%;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+#one_product input, #one_product button {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 20px;
+    width: 200px;
+    font-weight: bold;
+}
+
+#products a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#products form {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+input[type="number"] {
+    width: 80px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.view_product {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 0 20px;
+}
+
+#products img {
+    height: 150px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.images img {
+    height: 450px;
+    margin: 0 40px;
+}
+
+.description {
+    width: 150px;
+}
+
+.my_img {
+    width: 150px;
+    height: auto!important;
+}
+
+.invisible {
+    display: none;
+}
+
+.form_delete {
+    width: 150px!important;
+}
+
+.my_form {
+    height: 40px;
+}
+
+.my_form input, button {
+    height: 100%!important;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.my_form input  {
+    margin-right: 20px;
+}
+
+.my_form input, button {
+    width: 125px;
+}
+
+.regist {
+    display: flex;
+    flex-direction: column;
+}
